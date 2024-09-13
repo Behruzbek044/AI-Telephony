@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debtor's List</title>
+  <link rel="stylesheet" href="../css/upload.css">
+</head>
+
+<body>
+  <div id="vueapp" class="container">
+    <div class="header">
+     
+      <p>Here is a list of all creditors</p>
+      <div class="upload-container">
+        <label for="file-upload" class="custom-file-upload">
+          Choose File
+        </label>
+        <input type="file" id="file-upload" @change="handleFileChange" style="display:none;">
+        <span>{{ fileName || 'No file chosen' }}</span>
+      </div>
+      <button @click="uploadFile" class="upload-button">Upload</button>
+    </div>
+
+    <a class="upload-button" href="./getcallinfo.html">Call Info</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Client ID</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Debt Amount</th>
+          <th>Monthly Pay</th>
+          <th>Borrowed Date</th>
+          <th>Skipped Days</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in list_plans" :key="item.client_id">
+          <td>{{ item.client_id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.phone_number }}</td>
+          <td>{{ item.debt_amount }}</td>
+          <td>{{ item.monthly_pay }}</td>
+          <td>{{ item.borrowed_date }}</td>
+          <td>{{ item.skipped_days }}</td>
+          <td>{{ item.status }}</td>
+          <td>
+            <button @click="call(item)">Call</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="overall">
+      <div class="pie-chart"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../src/upload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+    <section class="section-banner">
+        <div class="container" id="vueapp">
+          <div class="banner-items">
+            <div class="banner-item">
+              <h2 class="banner-title">
+                Biznesni Boshqarish Banki
+              </h2>
+              <h1 class="banner-desc">
+                Welcome Back
+              </h1>
+              <p class="banner-text">Enter Your Details to login to your Banking Dashboard again!</p>
+            </div>
+    
+            <div class="auth-container">
+                <div class="login-container">
+                    <form @submit.prevent="login" class="login-form">
+                        <h2>Login</h2>
+                        <div class="input-group">
+                            <label for="username">Username</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="username" v-model="username" placeholder="Enter your username" required>
+                                <span class="input-icon">&#9993;</span> <!-- Envelope icon -->
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" v-model="password" placeholder="Enter your Password" required>
+                            <a href="#" class="forgot">|   Forgot?</a>
+                        </div>
+                        <button type="submit" class="auth-btn">Login</button>
+                        <p style="font-size: 12px;" class="register-text">Don't Have an Account? <a href="#">Register</a></p>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </section>
+   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../src/auth.js"></script>
+
+</body>
+</html>

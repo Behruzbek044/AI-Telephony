@@ -1,0 +1,255 @@
+:root{
+    --font-roboto: "Roboto", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --color-dark: #384046;
+    --color-dark-light: #4f5a62;
+    --color-gray: #ddd;
+    --color-blue: #3498db;
+    --color-blue-light: #65b9f1;
+    --color-blue-light2: #d8efff;
+    --color-home: #eee;
+    --color-kkkkkkk:rgba(150, 148, 148);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --color-red:#ce1212;
+}
+ 
+*,
+::before,
+::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    font-family: var(--font-open-sans);
+    min-width: 360px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+a,
+span,
+button,
+input,
+i {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:var(--font-roboto);
+}
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+ul{
+    list-style: none;
+}
+/* ==================== Section-banner ===================== */
+
+.section-banner{
+    background-image: url(img/login\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+  .banner-items{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+  }
+  .banner-item{ 
+    margin-top: 130px;
+    align-items: center;
+    
+  padding: 0px 20px;
+  
+  } 
+  .banner-title{
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--color-red);
+    margin-bottom: 20px;
+    
+  }
+  .banner-desc{
+    font-size: 45px;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+  }
+  .banner-text{
+    font-size: 14px;
+    color: var(--color-dark-light);
+    
+  }
+  .auth-container{
+    margin-top: 180px;
+    width: 400px;
+    height: 320px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 2px 31px rgb(211, 250, 211);
+    padding: 30px 20px;
+    
+  }
+  login-form h2 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-group .forgot {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.auth-btn {
+    width: 100%;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.log-txt{
+    color: #e74c3c;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.forgot{
+    margin-top: 12px;
+    text-align: center;
+}
+.login-btn:hover {
+    background-color: #c0392b;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.login-form h2 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Adjusted padding to make space for the icon */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+}
+
+.input-group .forgot {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #c0392b;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #e74c3c;
+    text-decoration: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/getcallinfo.css">
+</head>
+<body>
+    
+    <div class="inner" id="vueapp"> <!-- Добавляем ID для Vue -->
+        <div class="content">
+            <div class="container">
+                <div class="header">
+                    <h1>Call Info</h1>
+                    <p>Here is a list of all call records</p>
+                    <a class="upload-button" href="./upload.html">Upload page</a>
+                </div>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phone Number</th>
+                            <th>Duration</th>
+                            <th>Date Created</th>
+                            <th>Download Recording</th>
+                            <th>Reason</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Используем директиву v-for для динамического отображения данных -->
+                        <tr v-for="call in call_info_list" :key="call.id">
+                            <td>{{ call.phone_number }}</td>
+                            <td>{{ call.duration }}</td>
+                            <td>{{ call.date_created }}</td>
+                            <td><a :href="call.download_url" target="_blank">Download</a></td>
+                            <td>{{ call.reason }}</td>
+                            <td>{{ call.date }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <div class="overall">
+                    <div class="pie-chart"></div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../src/getcallinfo.js"></script>
+</body>
+</html>
